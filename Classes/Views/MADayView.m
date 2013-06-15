@@ -165,6 +165,12 @@ static const unsigned int TOP_BACKGROUND_HEIGHT          = 35;
 	[self.gridView addGestureRecognizer:self.swipeRightRecognizer];
 }
 
+- (void)setLabelFontSize:(unsigned int)size {
+  _labelFontSize = size;
+  _regularFont = nil;
+  _boldFont = nil;
+}
+
 - (void)layoutSubviews {
 	self.topBackground.frame = CGRectMake(CGRectGetMinX(self.bounds),
 										  CGRectGetMinY(self.bounds),
